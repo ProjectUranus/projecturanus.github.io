@@ -80,5 +80,5 @@ theme: light
 deploy:
   type: git   
   repo: https://github.com/ProjectUranus/projecturanus.github.io  #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-  branch: gh-pages #published
+  branch: master #published
   message: #leave this blank
