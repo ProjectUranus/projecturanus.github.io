@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Project Uranus</title>
+  <meta name="author" content="Lasm Gratel">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Project Uranus"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Project Uranus" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Project Uranus</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2021-09-22T07:51:20.000Z"><a href="/2021/09/22/Suffix-Tree/">2021-09-22</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2021/09/22/Suffix-Tree/">Suffix Tree</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><a target="_blank" rel="noopener" href="https://github.com/mezz/JustEnoughItems/tree/1.12/src/main/java/mezz/jei/suffixtree">mezz</a> 的修改版后缀树，依赖 fastutil。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    <span class="comment">// https://mvnrepository.com/artifact/com.projecturanus/suffixtree</span></span><br><span class="line">    implementation <span class="string">&#x27;com.projecturanus:suffixtree:1.0&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.projecturanus.suffixtree.GeneralizedSuffixTree;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> tree = <span class="keyword">new</span> GeneralizedSuffixTree();</span><br><span class="line">tree.put(<span class="number">0</span>, <span class="string">&quot;java&quot;</span>);</span><br><span class="line">tree.put(<span class="number">1</span>, <span class="string">&quot;groovy&quot;</span>);</span><br><span class="line">tree.put(<span class="number">2</span>, <span class="string">&quot;kotlin&quot;</span>);</span><br><span class="line"></span><br><span class="line">tree.search(<span class="string">&quot;blabla&quot;</span>); <span class="comment">// 返回int列表，与前面指定的index一一对应，建议使用IntList做缓存。</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2019-03-15T08:51:08.000Z"><a href="/2019/03/15/Uranus-Tech-Part-1/">2019-03-15</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2019/03/15/Uranus-Tech-Part-1/">Uranus Tech: Part 1</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>电路板在机器当中有至关重要的整体调控，协调资源以及维持正常运行的功能。没有电路板的机器只是破铜烂铁。</p>
+<p>对于每种机器来说，电路板的构造和部件不尽相同。你需要确保安装了<strong>正确的部件</strong>才能使电路板正常发挥作用！</p>
+<p>电路板的构造主要分为几个部分：电路板基板，线圈，金属薄膜（箔）</p>
+<h2 id="线圈"><a href="#线圈" class="headerlink" title="线圈"></a>线圈</h2><p>线圈是电路板中的重要部件，它决定了电路的额定功率以及热功率。线圈为机器的工作提供电能，所以良好的线圈可以提升机器的整体性能，而劣质线圈会使得机器过热的风险提升。</p>
+<p><strong>注意：并非电压越高的导线越好</strong>。事实上，高电压导线导致的热功率会使低承受能力的电路板有<strong>烧坏</strong>的风险。请选择电压以及与其他电路部件之间最适合的导线。</p>
+<p>计算公式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">热功率(W) = 电流(A) * 线损(EU/m)</span><br></pre></td></tr></table></figure>
+
+<p>在 GTCE + GA 中，发热最高的线圈则为坝塔尔合金和镍铬合金（24W），而红石合金和超导不发热。红石合金能够承受的电压较低，超导需要额外的部件来支持。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2019-03-15T08:50:00.000Z"><a href="/2019/03/15/Project-Uranus/">2019-03-15</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2019/03/15/Project-Uranus/">Project Uranus</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>在统一性和自由度中寻求平衡。</p>
+<p>这个项目主要做游戏相关，以及一些实用的优化库和企划。目前的所有项目仓库可以在 <a target="_blank" rel="noopener" href="https://github.com/ProjectUranus/">https://github.com/ProjectUranus/</a> 找到。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+<nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.projecturanus.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/uranustech-minecraft/">uranustech minecraft</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2021 Lasm Gratel
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
